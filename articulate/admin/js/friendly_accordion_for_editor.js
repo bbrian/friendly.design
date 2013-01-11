@@ -1,0 +1,1 @@
+jQuery('.friendly_accordion').friendlyAccordion({containerWidth : 648});

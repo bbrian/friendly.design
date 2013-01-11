@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head> 
+ 
+ 
+	<title>Friendly Themes ReadMe Documentation</title> 
+ 
+	<!-- ||| Meta information for search engine goodness and iThings ||| --> 
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Description" content="The guide for Friendly Themes WordPress templates."> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel="shortcut icon" href="/favicon.ico">
+ 
+	<!-- ||| Stylesheet Linkification and IE Jiggery Pokery ||| --> 
+  
+	<link rel="profile" href="http://gmpg.org/xfn/11" /> 
+	<link rel='index' title='' href='' /> 
+	<link rel="stylesheet" type="text/css" media="all" href="style.css" /> 
+ 
+	<!-- ||| Javascript magic, starting with Remy Sharp's brilliant html5 shiv ||| --> 
+ 
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+	<script src="js/modernizr.min.js"></script>
+ 
+</head>
+
+<body>
+
+	<header id="main_header">
+	
+		<div id="header_container">
+		
+			<ul>
+				<li>
+					<a href="http://www.friendlythemes.co.uk" title="Friendly Themes website">Web</a>
+				</li>
+				<li>
+					<a href="http://www.twitter.com/friendlythemes" title="Friendly Themes on Twitter">Twitter</a>
+				</li>
+				<li>
+					<a href="http://www.dribbble.com/friendlythemes" title="Friendly Themes on dribbble">Dribbble</a>
+				</li>
+				
+			</ul>
+		
+		</div>
+	
+	</header><!-- #main_header -->
+	
+	
+	<section id="nav_container">
+	
+		<a id="logo" href="http://www.friendlythemes.co.uk/" title="Visit the Friendly Themes website">
+			<img src="images/friendly-logo-100.png" alt="Friendly Themes Logo" />
+		</a>
+	
+		<nav id="main_menu">
+		
+			<ul>
+				<li id="menu_overview"><a class="youarehere" href="#overview" title="Overview">Overview</a></li>
+				<li id="menu_info"><a href="#info" title="Info">Info</a></li>
+				<!--  <li id="menu_maintenancemode"><a href="#maintenancemode" title="Maintenance Mode">Maintenance</a></li>-->
+				<li id="menu_credits"><a href="#credits" title="Credits">Credits</a></li>
+			</ul>
+		
+		</nav><!-- #main_menu  -->
+	
+	</section><!-- #nav_container -->
+	
+	
+	<section id="main_content">
+	
+		<h1>Documentation for a HTML theme <span>by</span> Friendly Themes</h1>
+	
+		<!-- ================================================================================ -->
+		
+		<article id="overview">
+		
+			<h2>01 - Overview</h2>
+			
+			<p>Firstly, allow both of us (Andy and Rich), to say thank you for purchasing one of our items. We have put an <strong>awful</strong> lot of effort into making this the best in the world. This help document covers pretty much everything you'll need to know about getting up and running.</p>
+			
+			<p>So, without further ado, let's take a look at what you've bought, what each folder does and what you should do with them.</p>
+			
+			<p>When you downloaded your zip package and found this help documentation, you will have noticed that there were several other folders. The "PSD" folder contains all of the photoshop files that you may need if you wish to adjust the graphics we've used on this template.</p>
+			
+			<p>You'll also see a folder called 'the-theme'. In there, unsurprisingly, you'll find all of the page layouts, css, images etc. We keep all of our images, javascript etc. in a 'theme_assets' folder, to keep all things neat and tidy. On top of that, we have a 'template_parts' folder which allows you to make custom templates with ease.</p>
+			
+			<p class="note"><strong>Note: </strong>We use Mac OS X when we take our screenshots and screencasts, so things might look slightly different for you, but the way you do things will be exactly the same.</p>
+			
+			<p>OK, so, now you know what each item is and does, let's move on to installing your theme.</p>
+		
+		</article><!-- #overview -->
+		
+		<article id="info">
+		
+			<h2>Info</h2>
+			
+			<p>Your Venus template comes with a PHP file called ajax-load.php. This file is used to load in content when the user clicks on the 'plus' icon. If your server is incapable of (or if you don't want to use) PHP files, then you should simply not include that particular section of the header elements (that way the plus icon won't show up)</p>
+			
+			<p>We've included LESS files which, if you use them as part of your development process then you're free to use. If you're unsure what these are, you are free to ignore them.</p>
+			
+			<p>We've designed this series of templates to be literally a case for you to copy and paste and edit the content. But there's some things which you may need to know.</p>
+			
+			<p>For the main menu, if you give one of the top-level <code>li</code> elements a class of <code>current-menu-item</code> then that item will have the green 'active' indicator at the top.</p>
+			
+			<p>If you wish to change the background of the 'title and search bar' strip on the inner pages, you'll need to edit line 2315 of <code>style.css</code>, alternatively, you can replace sliderbgxy.jpg in /theme_assets/images/</p>
+			
+			<p>Likewise with the breadcrumb bar, you can edit line 2320 in <code>style.css</code> or change breadcrumb-bg.jpg in /theme_assets/images/</p>
+			
+			<p>For lots of items, such as 'call to action' buttons and the social icons in the footer, we use a cool little jQuery plugin called tipTip. If you want to use this for your own elements, simply give them a <code>class</code> of "tip" and a <code>title</code> attribute of whatever you want the tip to show when it is hovered, e.g.:</p>
+			
+<pre class="html"><code>&lt;a href=&quot;google.com&quot; title=&quot;This will appear in the tip&quot; class=&quot;tip&quot;&gt;Link Text&lt;/a&gt;</code></pre>
+
+			<p>We've included lots of 'snippets' for you to use (see the template_parts/ folder) - they'll allow you to add tabs, accordions, buttons, toggles, banners etc. really easily. At the top of each file is a simple bit of help, too, but the idea is you can simply copy and paste.</p>
+			
+			
+		
+		</article><!-- #info -->
+		
+		<!-- ================================================================================ -->
+		
+		<article id="credits">
+		
+			<h2>Credits</h2>
+			
+			<p>There are several images, scripts, code and nick-knacks that we've used either with permission or are in public domain with the relevant licenses. Most things we've used don't require attribution, but, as we're nice people, we like to give credit where it is due. Here's a few items and links that we think you should check out (in no particular order):</p>
+			
+			<ol>
+				<li><a href="http://www.flickr.com/photos/simon-bouchard/sets/72157624798241210/" title="Photos by Simon Bouchard">Photos by Simon Bouchard</li>
+				<li><a href="http://www.flickr.com/photos/tetsumo/" title="Photos by 'Tetsumo'">Photos by 'Tetsumo'</a></li>
+				<li><a href="http://www.flickr.com/photos/markjsebastian/" title="Photos by Mark Sebastian">Photos by Mark Sebastian</a></li>
+				<li><a href="http://www.flickr.com/photos/kyz/" title="Photos by Kyz">Photos by Kyz</a></li>
+				<li><a href="http://www.flickr.com/photos/kirstea/" title="Photos by Kirstea">Photos by Kirstea</a></li>
+				<li><a href="http://www.flickr.com/photos/21560098@N06/4284926050/sizes/l/in/photostream/" title="Photos by Nina Matthews">Photos by Nina Matthews</a></li>
+				<li><a href="http://wordpress.stackexchange.com/questions/1567/best-collection-of-code-for-your-functions-php-file" title="A really good thread on WordPress Stack exchange">A really good thread on WordPress Stack exchange</a></li>
+				<li><a href="http://www.iconfinder.com/icondetails/65528/48/colours_rgb_icon" title="Icons">Some icons from Icon Finder</a></li>
+				<li><a href="http://www.gettopup.com/" title="TopUp lightbox">TopUp lightbox script</a></li>
+				<li><a href="http://tympanus.net/codrops/2011/01/27/thumbnails-preview-slider/" title="CoDrops">Inspiration and awesome work from MaryLou at CoDrops</a></li>
+				<li><a href="http://econym.org.uk/gmap/" title="Google Maps">Google maps API tutorial</a></li>
+				<li><a href="http://plugins.jquery.com/project/slidingtabs" title="Sliding tabs">jQuery sliding tabs</a></li>
+				<li><a href="http://www.htmldog.com/articles/suckerfish/dropdowns/" title="Suckerfish">Suckerfish menu</a></li>
+				<li><a href="http://www.jquery.com/" title="jQuery">jQuery</a></li>
+			</ol>
+			
+			<p>So that just leaves us to say thank you so much. We hope you enjoy your theme and of course, feel free to let us know what you've done with it or, if you get stuck - fire us an e-mail!</p>
+		
+		</article><!-- #credits -->
+		
+		<!-- ================================================================================ -->
+	
+	</section><!-- #main_content -->
+	
+	<footer id="main_footer">
+	
+		<p>
+			Help Documentation by <a href="http://www.friendlythem.esk" title="Friendly Themes Website">Friendly Themes</a> | &copy; 2011 Friendly Themes | <a href="#main_header" title="Back To Top">Top &uarr;</a>
+		</p>
+	
+	</footer><!-- #main_footer -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
+	<script src="media/mediaelement-and-player.min.js"></script>
+	<script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+	<script src="js/jquery.snippet.min.js"></script>
+	<script src="js/site.js"></script>
+	
+	<!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+	<script>DD_belatedPNG.fix('img, .png_bg');</script>
+	<![endif]-->
+
+</body>
+
+</html>

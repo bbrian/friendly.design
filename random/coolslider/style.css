@@ -1,0 +1,155 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+	display: block
+}
+
+body
+{
+	line-height: 1
+}
+
+ol,ul
+{
+	list-style: none
+}
+
+/* ----------------------------------- */
+
+#feature
+{
+	height: 720px;
+	background: #262626 url(loading.gif) no-repeat center 480px;
+	z-index: 1;
+	margin-bottom: 40px
+}
+
+#pagination
+{
+	position: absolute;
+	top: 670px;
+	z-index: 3;
+	margin: 0;
+	padding: 0;
+	display: none
+}
+
+#pagination li
+{
+	text-indent: -99999em;
+	float: left;
+	padding: 0 4px;
+	cursor: pointer
+}
+
+#pagination li a
+{
+	width: 6px;
+	height: 6px;
+	background: #fff;
+	border-radius: 10px;
+	display: block;
+	border: 1px solid #fff;
+	opacity: .7;
+	-webkit-transition: opacity .1s linear;
+	-moz-transition: opacity .1s linear;
+	transition: opacity .1s linear
+}
+
+#pagination li.active a
+{
+	background: 0
+}
+
+#pagination li:hover a
+{
+	opacity: 1
+}
+
+h1.no_slider
+{
+	color: white;
+}
+
+.slide
+{
+	width: 100%;
+	height: 720px;
+	position: absolute;
+	display: none;
+	overflow: hidden;
+	z-index: 1;
+	top: 0;
+}
+
+.slide.previous
+{
+	z-index: 1
+}
+
+.slide.active
+{
+	z-index: 2
+}
+
+.slide.hiddden
+{
+	display: none
+}
+
+.slide .info
+{
+	position: absolute;
+	bottom: 80px;
+	text-align: center;
+	width: 100%;
+	display: none;
+	z-index: 10
+}
+
+.slide .info h2
+{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 300
+}
+
+.asset,.fade
+{
+	position: absolute;
+	display: none
+}
+
+
+#slide-left,
+#slide-right
+{
+	width: 31px;
+	height: 37px;
+	display: block;
+	position: absolute;
+	top: 340px;
+	left: 0;
+	background: red;
+	opacity: .5;
+	-webkit-transition: opacity .1s linear;
+	-moz-transition: opacity .1s linear;
+	transition: opacity .1s linear;
+	display: none;
+	z-index: 2;
+}
+
+#slide-right
+{
+	left: auto;
+	right: 0;
+}

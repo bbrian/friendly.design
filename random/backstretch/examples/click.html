@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="examples.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Click Demo</h1>
+        <p>This demonstrates a commonly-asked question: how do I replace Backstretch's image once it's been called? Answer: easy, just call it again!</p>
+        <p>Furthermore, it gives an example of simple onclick functionality.</p>
+        <p>
+            <input type="button" id="cups" value="Show Chocolate cups Background" />
+            <input type="button" id="tart" value="Show Chocolate tart Background" />
+        </p>
+        <pre><code class="runnable">
+    $.backstretch("chocolate-cups-landscape.jpg");
+
+    $("#cups").click(function() {
+        $.backstretch("chocolate-cups-landscape.jpg");
+    });
+
+    $("#tart").click(function() {
+        $.backstretch("chocolate-tart-landscape.jpg");
+    });
+        </code></pre>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="../jquery.backstretch.js"></script>
+    <script src="runnable-code.js"></script>
+    <script src="hijs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+// Usage:  .border-radius(5px);
+.border-radius(@radii)
+{
+	-webkit-border-radius: @radii;
+	-moz-border-radius: @radii;
+	border-radius: @radii;
+	-webkit-background-clip: padding-box;
+}
+
+// Usage: .transition(all 0.3s linear);
+.transition(@value)
+{
+	@val:@value;
+	-webkit-transition:@val;
+	-moz-transition:@val;
+	-o-transition:@val;
+	transition:@val;
+}
+
+// Usage: .box-shadow(0px, 0px, 2px, 0px, rgb(140,140,140))
+.box-shadow(@x: 0px, @y: 0px, @blur: 2px, @spread: 0px, @color: rgb(140,140,140))
+{
+	-webkit-box-shadow:  @x @y @blur @spread @color;
+	-moz-box-shadow:  @x @y @blur @spread @color;
+	box-shadow:  @x @y @blur @spread @color;
+}
+
+// Usage: .linear-gradient(#333, #999, 70%);
+.linear-gradient( @begin: black, @end: white, @switch : 100%) 
+{
+	background:  @begin;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(@begin), color-stop(@switch, @end));
+	background: -moz-linear-gradient(top, @begin, @end @switch);
+	background: -o-linear-gradient(top, @begin, @end @switch);
+	background: linear-gradient(top, @begin, @end @switch);
+}
+
+//Usage: .radial-gradient(#333, #999);
+.radial-gradient( @begin: black, @end: white )
+{
+	background:-webkit-gradient(radial,center center,0,center center,100,from(@begin),to(@end));
+	background:-moz-radial-gradient(@begin,@end);
+	background:-webkit-radial-gradient(@begin,@end);
+}
+
+.css3button(@bg : #666, @border : 1px, @border-rad : 0.3em)
+{
+	display: inline-block;
+	outline: none;
+	line-height: 2em;
+	border:@border solid desaturate(darken(@bg,10%),50%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, 
+					from(lighten(@bg,60%)), 
+					color-stop(3%, lighten(@bg,30%)),
+					color-stop(100%, @bg),
+					);
+	background: -moz-linear-gradient(top, 
+					lighten(@bg,60%) 0%,
+					lighten(@bg,30%) 3%, 
+					@bg 100%);
+	text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+	.border-radius(@border-rad);
+	color: desaturate(darken(@bg,20%),50%);
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0 1em;
+	
+	&:active
+	{
+		background: -moz-linear-gradient(top, 
+						lighten(@bg,30%) 0%,
+						@bg 2%, 
+						lighten(@bg,30%) 100%);
+		background: -webkit-gradient(linear, 0 0, 0 100%, 
+						from(lighten(@bg,30%)), 
+						color-stop(2%, @bg),
+						color-stop(100%, lighten(@bg,30%)),
+						);
+		text-shadow: 0 -1px 1px rgba(255,255,255,0.6);
+	}
+	
+}
+
+// Usage: .opacity(50); 
+.opacity(@opacity: 100)
+{
+	-webkit-opacity: @opacity / 100;
+	-moz-opacity: @opacity / 100;
+	-o-opacity: @opacity / 100;
+	filter: e(%("alpha(opacity=%d)", @opacity));
+	opacity: @opacity / 100;
+}
